@@ -23,6 +23,11 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  encoding: utf8
+  encoding: unicode
+  host: localhost
+  port: 5432
+  username: postgres
+  password: tomato
+  database: mydb
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   url: <%= ENV['DATABASE_URL'] %>
